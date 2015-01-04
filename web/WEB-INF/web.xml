@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name>eshop</display-name>
+  <servlet>
+    <description>
+    </description>
+    <display-name>ShopServlet</display-name>
+    <servlet-name>ShopServlet</servlet-name>
+    <servlet-class>eshop.ShopServlet</servlet-class>
+    
+    <!--IMPORTANT: This must be set to either "oracle" or "derby" -->
+    <init-param>
+      <param-name>dbVendor</param-name>
+      <param-value>oracle</param-value>
+    </init-param>
+    
+    
+    <init-param>
+      <param-name>jdbcDriver</param-name>
+      <param-value>oracle.jdbc.OracleDriver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>dbURL</param-name>
+      <param-value>jdbc:oracle:thin:@datdb.cphbusiness.dk:1521:dat</param-value>
+    </init-param>
+    <init-param>
+      <param-name>dbUserName</param-name>
+      <param-value>lam</param-value>
+    </init-param>
+    <init-param>
+      <param-name>dbPassword</param-name>
+      <param-value>lam</param-value>
+    </init-param>
+       
+<!--  <init-param>
+      <param-name>jdbcDriver</param-name>
+      <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>dbURL</param-name>
+      <param-value>jdbc:derby://localhost:1527/shop</param-value>
+    </init-param>
+    <init-param>
+      <param-name>dbUserName</param-name>
+      <param-value>test</param-value>
+    </init-param>
+    <init-param>
+      <param-name>dbPassword</param-name>
+      <param-value>test</param-value>
+    </init-param>-->
+
+  </servlet>
+  <welcome-file-list>
+    <welcome-file>ctrl</welcome-file>
+  </welcome-file-list>
+</web-app>
